@@ -16,7 +16,7 @@ const Hero: React.FC = () => {
     <section className="hero">
       <div className="hero__inner">
         <div className="hero__text">
-          <h4>4k group</h4>
+          <h4>cash trade</h4>
           <p>Ваш надежный партнер в обменных операциях</p>
         </div>
       </div>

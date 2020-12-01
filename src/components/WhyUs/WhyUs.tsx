@@ -56,7 +56,7 @@ const WhyUs: React.FC = () => {
           условия и всегда находим компромисс с клиентом для достижения общего успеха.
         </p>
         <p className="why-us__subheading">
-          Вот лишь несколько причин, почему вы должны выбрать 4k group
+          Вот лишь несколько причин, почему вы должны выбрать cashtrade
         </p>
         <div className="why-us__cards">
           {cardsData.map((card) => (

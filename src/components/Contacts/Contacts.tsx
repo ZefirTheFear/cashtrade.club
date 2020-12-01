@@ -13,7 +13,9 @@ import { RootState } from "../../store/store";
 
 import { scrollToNode } from "../../utils/ts/helperFunctions";
 
-import { ReactComponent as Logo } from "../../assets/logo/logo-full.svg";
+// import { ReactComponent as Logo } from "../../assets/logo/logo-full.svg";
+// import { ReactComponent as Logo } from "../../assets/logo/logo-full-ct.svg";
+import { ReactComponent as Logo } from "../../assets/logo/logo-full-ct2.svg";
 
 import "./Contacts.scss";
 
