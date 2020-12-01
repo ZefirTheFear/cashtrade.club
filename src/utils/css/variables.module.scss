@@ -1,0 +1,67 @@
+// fonts
+$main-font: "Cuprum", sans-serif;
+
+// metrics
+$app-inner-width: 90%;
+$header-height: 60px;
+$border-radius: 5px;
+
+// colors
+$main-app-color: #edff21;
+$light-color: #f0fff0;
+$dark-color: #2c2c2c;
+
+$app-black-color: #0d0d0d;
+$app-grey-color: #909090;
+$invalid-color: #dc3545;
+
+// z-i
+$header-z-i: 10;
+$mob-menu-z-i: 11;
+$spinner-z-i: 12;
+$sww-z-i: 12;
+$modal-z-i: 12;
+
+// transitions
+// $main-transition: all 0.15s ease-out;
+$main-transition: all 0.15s linear;
+$menu-btn-transition: all 0.3s ease-out;
+$mobile-menu-transition: all 0.3s ease-out;
+
+// colors
+// $main-app-color: #00bb98;
+// $main-app-color: #e605c8;
+// $main-app-color: #fd7400;
+// $main-app-color: #9b22eb;
+// $main-app-color: #2268eb;
+// $light-color: #f0fff0;
+// $dark-color: #0d0d0d;
+// $dark-grey-color: #2c2c2c;
+// $common-grey-color: #666;
+// $light-grey-color: #909090;
+// $invalid-color: #dc3545;
+// $svg-color: #0d0d0d;
+// $svg-hover-color: #8c05e6;
+
+// not-used colors
+// $color_01: #8146fe;
+// $color_02: #282c34;
+// $color_03: #61dafb;
+// $color_04: #003662;
+// $color_05: #f2f3f8;
+// $color_06: #fd7400;
+// $color_07: #e605c8;
+// $color_08: #9b22eb;
+// $color_09: #a7fc00;
+// $color_10: #edff21;
+// $color_11: #04ad79;
+// $color_12: #eece1a;
+// $color_13: #383838;
+// $color_14: #004358;
+// $color_15: #521779;
+// $color_16: #1a1a1a;
+// $color_17: #d4fd02;
+
+:export {
+  headerHeight: $header-height;
+}

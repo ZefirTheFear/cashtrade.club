@@ -1,0 +1,12 @@
+// @import "./utils/css/variables";
+@import "./utils/css/variables.module";
+@import "./utils/css/mixins";
+
+.app {
+  color: $light-color;
+  background: $dark-color;
+  // background: url("./assets/bg/bg_point.png") rgba(0, 0, 0, 0.2);
+  min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+}

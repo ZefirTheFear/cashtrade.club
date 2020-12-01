@@ -1,0 +1,20 @@
+@import "../../utils/css/variables.module";
+@import "../../utils/css/mixins";
+
+.calculator-section {
+  background: darken($dark-color, 3);
+}
+
+.calculator-section__inner {
+  @include section;
+  flex-direction: column;
+}
+
+.calculator-section__calculator {
+  margin-bottom: 1rem;
+}
+
+.calculator-section__toggle-type-btn {
+  @include button;
+  font-size: 1.25rem;
+}

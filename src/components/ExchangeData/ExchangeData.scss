@@ -1,0 +1,113 @@
+@import "../../utils/css/variables.module";
+@import "../../utils/css/mixins";
+
+// -- Remove Arrows --
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+// -------------------
+
+.exchange-data__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.exchange-data__selected {
+  @include input;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @mixin hover {
+    .exchange-data__select-arrow {
+      color: $app-grey-color;
+    }
+  }
+  &:active {
+    @include hover;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include hover;
+    }
+  }
+}
+
+.exchange-data__currency-img {
+  height: 80%;
+  margin: 0 0.5rem;
+}
+
+.exchange-data__currency-name {
+  flex: 1;
+  margin-right: 0.5rem;
+  font-size: 2rem;
+}
+
+.exchange-data__select-arrow {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0.5rem;
+  font-size: 2rem;
+  transition: $main-transition;
+}
+
+.exchange-data__select-arrow_is-opened {
+  transform: rotate(-180deg);
+}
+
+.exchange-data__select-options {
+  @include input;
+  position: absolute;
+  height: 0;
+  padding: 0;
+  margin-top: -5px;
+  border: 0px solid $app-grey-color;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.exchange-data__select-options-item {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border-bottom: 1px solid $app-grey-color;
+  cursor: pointer;
+  transition: $main-transition;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  @mixin hover {
+    background: $dark-color;
+  }
+  &:active {
+    @include hover;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include hover;
+    }
+  }
+}
+
+.exchange-data__input {
+  @include input;
+  margin-top: 1rem;
+  padding: 10px 15px;
+  font-size: 2rem;
+  line-height: normal;
+}

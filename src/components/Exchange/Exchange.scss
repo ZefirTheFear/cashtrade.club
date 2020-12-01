@@ -1,0 +1,139 @@
+@import "../../utils/css/variables.module";
+@import "../../utils/css/mixins";
+
+.exchange {
+  text-transform: uppercase;
+}
+
+.exchange__inner {
+  @include section;
+  flex-direction: column;
+}
+
+.exchange__desc {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.3rem;
+  line-height: 1.3;
+
+  @media (max-width: 767px) {
+    font-size: 1rem;
+  }
+}
+
+.exchange__contact-link {
+  cursor: pointer;
+  color: $main-app-color;
+  transition: $main-transition;
+
+  @mixin hover {
+    color: darken($main-app-color, 30);
+  }
+  &:active {
+    @include hover;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include hover;
+    }
+  }
+}
+
+.exchange__form {
+  text-align: center;
+  width: 100%;
+}
+
+.exchange__required {
+  margin-bottom: 1rem;
+}
+
+.exchange__inputs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.exchange__form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  &:first-child {
+    margin-right: 1rem;
+  }
+
+  @media (max-width: 767px) {
+    &:first-child {
+      margin-right: 0rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  small {
+    position: absolute;
+    bottom: -1rem;
+    font-size: 0.8rem;
+    color: $invalid-color;
+  }
+}
+
+.exchange__input {
+  @include input;
+  width: 100%;
+  max-width: 280px;
+  padding: 10px 15px;
+  font-size: 2rem;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.exchange__input_invalid {
+  border: 2px solid $invalid-color;
+}
+
+.exchange__comment {
+  width: 100%;
+  max-width: 576px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+
+  @media (max-width: 767px) {
+    max-width: 280px;
+  }
+
+  textarea {
+    @include input;
+    width: 100%;
+    height: auto;
+    resize: none;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    line-height: normal;
+
+    &::placeholder {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.exchange__btn {
+  @include button;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: 767px) {
+    font-size: 1.5rem;
+  }
+}
+
+.exchange__error {
+  font-size: 0.8rem;
+  text-align: center;
+}

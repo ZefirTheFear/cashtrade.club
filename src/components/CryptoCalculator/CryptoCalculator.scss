@@ -1,0 +1,48 @@
+@import "../../utils/css/variables.module";
+@import "../../utils/css/mixins";
+
+.crypto-calculator__desc {
+  p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+}
+
+.calculator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+}
+
+.calculator__swaper {
+  margin: 1rem 2rem;
+  font-size: 3rem;
+  cursor: pointer;
+  transition: $main-transition;
+
+  @mixin hover {
+    color: $app-grey-color;
+  }
+  &:active {
+    @include hover;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include hover;
+    }
+  }
+
+  @media (max-width: 767px) {
+    transform: rotate(90deg);
+  }
+
+  svg {
+    display: block;
+  }
+}

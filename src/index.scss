@@ -1,0 +1,38 @@
+// @import "./utils/css/variables";
+@import "./utils/css/variables.module";
+@import "./utils/css/reset";
+
+// @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic,cyrillic-ext");
+@import url("https://fonts.googleapis.com/css2?family=Cuprum&display=swap");
+
+@font-face {
+  font-family: "Terminator Gen";
+  src: url(./assets/fonts/terminator-gen.otf);
+}
+
+@supports not (-moz-appearance: none) {
+  /* Add non-firefox CSS code here */
+  * {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  input,
+  textarea {
+    user-select: auto;
+  }
+}
+
+// html {
+//   width: 100vw;
+//   height: 100vh;
+//   overflow-y: hidden;
+// }
+
+body {
+  // width: 100%;
+  // height: 100%;
+  font-family: $main-font;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

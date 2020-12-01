@@ -1,0 +1,31 @@
+@import "../../utils/css/variables.module";
+
+.map__close-panorama {
+  position: absolute;
+  left: 5vw;
+  top: 20px;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $dark-color;
+  background: $main-app-color;
+  border: 1px solid $dark-color;
+  border-radius: 5px;
+  font-size: 2rem;
+  z-index: 2;
+  cursor: pointer;
+
+  svg {
+    display: block;
+  }
+}
+
+.map-feedback {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

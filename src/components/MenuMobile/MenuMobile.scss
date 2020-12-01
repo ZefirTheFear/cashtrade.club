@@ -1,0 +1,51 @@
+// @import "../../utils/css/variables";
+@import "../../utils/css/variables.module";
+
+.menu-mobile {
+  position: fixed;
+  top: $header-height;
+  left: -100%;
+  width: 100%;
+  z-index: $mob-menu-z-i;
+}
+
+.menu-mobile__item {
+  transform: translate(0, 0);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc((100vh - #{$header-height}) / 5);
+  background: $app-black-color;
+  color: $main-app-color;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  border-bottom: 3px solid $main-app-color;
+  cursor: pointer;
+  // transition: $main-transition;
+  transition-property: transform, height;
+  transition-duration: 0.15s, 0.15s;
+
+  @mixin hover {
+    color: $app-grey-color;
+  }
+  &:active {
+    @include hover;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      @include hover;
+    }
+  }
+}
+
+.menu-mobile__item_open {
+  transform: translate(100%, 0);
+}
+
+@for $x from 1 through 5 {
+  .menu-mobile__item:nth-child(#{$x}) {
+    // transition-delay: $x * 0.1s;
+    transition-delay: $x * 0.1s, 0s;
+  }
+}

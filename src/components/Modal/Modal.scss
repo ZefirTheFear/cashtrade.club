@@ -1,0 +1,46 @@
+@import "../../utils/css/variables.module";
+@import "../../utils/css/mixins";
+
+.modal {
+  @include modal;
+  z-index: $modal-z-i;
+  flex-direction: column;
+  color: $light-color;
+}
+
+.modal__img {
+  width: 280px;
+  height: 280px;
+  max-height: 50vh;
+  max-width: 50vh;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.modal__msg {
+  padding: 0 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.modal__btn-group {
+  width: 280px;
+  display: flex;
+  justify-content: space-around;
+
+  button {
+    @include button;
+    min-width: 80px;
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
